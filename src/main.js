@@ -5,9 +5,11 @@ import App from './App'
 import router from './router'
 
 // 项目初始化
-import './assets/styles/reset.css'
+import 'styles/reset.css'
 // 1像素边框
-import './assets/styles/border.css'
+import 'styles/border.css'
+// 引入字体图标文件
+import 'styles/iconfont.css'
 
 // 解决移动端点击事件延迟300ms
 import fastClick from 'fastclick'
