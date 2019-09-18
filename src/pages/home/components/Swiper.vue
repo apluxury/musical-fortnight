@@ -37,8 +37,9 @@ export default {
 .swiperbox {
   overflow: hidden;
   width: 100%;
+  height: 0;
   // 设置宽高比 给图片预留高度
-  padding-buttom: 31.25%;
+  padding-bottom: 31.25%;
   background-color: #eee;
 
   .swiper-img {
