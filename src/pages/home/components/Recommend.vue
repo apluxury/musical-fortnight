@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl" />
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -16,24 +16,11 @@
 <script>
 export default {
   name: 'HomeRecommend',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1603/50/5020c11e7dde947390.water.jpg_200x200_a7b59471.jpg',
-        title: '武义清水湾沁温泉',
-        desc: '清水湾座落在武义，温泉之乡，所以选择来入住，感受一下，果不出意料'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1603/50/5020c11e7dde947390.water.jpg_200x200_a7b59471.jpg',
-        title: '武义清水湾沁温泉',
-        desc: '清水湾座落在武义，温泉之乡，所以选择来入住，感受一下，果不出意料'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1603/50/5020c11e7dde947390.water.jpg_200x200_a7b59471.jpg',
-        title: '武义清水湾沁温泉',
-        desc: '清水湾座落在武义，温泉之乡，所以选择来入住，感受一下，果不出意料'
-      }]
     }
   }
 }
