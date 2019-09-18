@@ -3,9 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 // 引入swiper插件
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-
 // 项目初始化
 import 'styles/reset.css'
 // 1像素边框
@@ -22,6 +22,7 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
