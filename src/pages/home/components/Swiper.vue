@@ -24,7 +24,6 @@ export default {
         id: '0002',
         imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/7494fa53d36663f12d6b3ecbe4ed5ca2.jpg_890x330_a37f96fa.jpg'
       }
-
       ]
     }
   }
