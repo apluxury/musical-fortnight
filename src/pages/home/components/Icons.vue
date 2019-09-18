@@ -88,6 +88,10 @@ export default {
   padding-bottom: 50%;
 }
 
+.icons {
+  margin: 0.1rem;
+}
+
 .icon-name {
   position: absolute;
   right: 0;
