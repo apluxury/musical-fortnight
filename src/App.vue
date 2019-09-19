@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <router-view />
+    <!-- keep-aline 便签避免反复发送异步请求 使用缓存数据-->
+    <keep-alive>
+      <router-view />
+    </keep-alive>
   </div>
 </template>
 
