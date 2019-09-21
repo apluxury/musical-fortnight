@@ -1,22 +1,22 @@
 <template>
   <div>
-    <router-link tag="div" to="/" class="header-abs" v-show="showAbs">
+    <router-link tag="div" to="/" class="header-abs" v-show="showabs">
       <div class="iconfont header-abs-back">&#xe7eb;</div>
     </router-link>
-    <div class="header-fixed" v-show="!showAbs" :style="opacityStyle">
+    <div class="header-fixed" v-show="!showabs" :style="opacityStyle">
+      景点详情
       <router-link to="/">
         <div class="iconfont header-fixed-back">&#xe7eb;</div>
-      </router-link>景点详情
+      </router-link>
     </div>
   </div>
 </template>
-
 <script>
 export default {
   name: 'DetailHeader',
   data () {
     return {
-      showAbs: true,
+      showabs: true,
       opacityStyle: {
         opacity: 0
       }
@@ -29,22 +29,22 @@ export default {
         let opacity = top / 140
         opacity = opacity > 1 ? 1 : opacity
         this.opacityStyle = { opacity }
-        this.showAbs = false
+        this.showabs = false
       } else {
-        this.showAbs = true
+        this.showabs = true
       }
     }
   },
+  //   页面展示的时候绑定事件
   activated () {
-    console.log(55555)
     window.addEventListener('scroll', this.handleScroll)
   },
+  //   页面影藏的时候解绑事件
   deactivated () {
     window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
-
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl';
 
@@ -53,11 +53,11 @@ export default {
   left: 0.2rem;
   top: 0.2rem;
   width: 0.8rem;
-  height: 0.8rem;
-  border-radius: 0.4rem;
-  background-color: rgba(0, 0, 0, 0.8);
-  text-align: center;
   line-height: 0.8rem;
+  height: 0.8rem;
+  text-align: center;
+  border-radius: 0.4rem;
+  background: rgba(0, 0, 0, 0.8);
 
   .header-abs-back {
     color: #fff;
@@ -66,7 +66,7 @@ export default {
 }
 
 .header-fixed {
-  z-index: 2;
+  z-index: 10;
   position: fixed;
   top: 0;
   left: 0;

@@ -38,7 +38,7 @@ export default {
   }
 }
 </script>
-<style lang="stylus">
+<style lang="stylus" scope>
 .container >>> .swiper-container {
   overflow: inherit;
 }

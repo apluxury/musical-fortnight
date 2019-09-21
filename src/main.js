@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
+// 解决部分客户端不支持promise语法
+import 'babel-polyfill'
 // 引入swiper插件
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 // 项目初始化
